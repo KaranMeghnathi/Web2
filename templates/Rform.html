@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rform</title>
+</head>
+<body>
+
+    <form action="Rform" method="post">
+    {% csrf_token %}
+        <input type="text" name="Fname" placeholder="First Name"><br>
+        <input type="text" name="Lname" placeholder="Last Name"><br>
+        <input type="text" name="username" placeholder="user Name"><br>
+        <input type="email" name="email" placeholder="Email_Id"><br>
+        <input type="password" name="password1" placeholder="Password"><br>
+        <input type="password" name="Pass2" placeholder="Confirm Password"><br><br>
+        <input type="submit"><br>
+    </form>
+    <div>
+            {% for message in messages  %}
+            <h4>{{message}} </h4>
+            {% endfor %}
+
+    </div>
+</body>
+</html>
